@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Міністерство оборони України</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1a1a2e;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #0d1b2a;
+      padding: 50px 0;
+      text-align: center;
+      font-size: 3em;
+      font-weight: bold;
+      color: #f5bc00;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      animation: fadeInHeader 2s ease-out;
+    }
+
+    main {
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #273c75;
+      border-radius: 12px;
+      max-width: 1200px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      animation: slideIn 1.5s ease-out;
+    }
+
+    section {
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #273c75, #142350);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      animation: fadeInSection 1.5s forwards;
+      transition: all 0.3s ease;
+    }
+
+    section:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      color: #f5bc00;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: fadeInText 1s ease-out;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 15px 0;
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #d6d6d6;
+      position: relative;
+      opacity: 0;
+      animation: fadeInList 1.2s ease-out forwards;
+      text-align: justify;
+      transition: color 0.3s ease;
+    }
+
+    ul li:hover {
+      color: #f5bc00;
+    }
+
+    .highlight {
+      color: #f5bc00;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #0d1b2a;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5em;
+      color: #f5bc00;
+      margin-top: 40px;
+      border-top: 1px solid #f5bc00;
+      letter-spacing: 1px;
+    }
+
+    /* Animations */
+    @keyframes fadeInHeader {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInSection {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInList {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Scrolling Effects */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #0d1b2a;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #1a1a2e;
+    }
+
+    .hover-btn {
+      background-color: #f5bc00;
+      color: #0d1b2a;
+      padding: 15px;
+      border: none;
+      font-size: 1.1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .hover-btn:hover {
+      transform: scale(1.1);
+      background-color: #273c75;
+      color: #fff;
+    }
+
+    .content {
+      font-size: 1.2em;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    Міністерство оборони України
+  </header>
+
+  <main>
+    <section>
+      <h2>Про Міністерство оборони України</h2>
+      <div class="content">
+        <p>Міністерство оборони України (МО) є центральним органом виконавчої влади, основним завданням якого є забезпечення національної безпеки, оборони країни та належного функціонування Збройних Сил України (ЗСУ) і інших державних військових формувань, залучених до оборони. МО України координує стратегічні, організаційні, економічні та інші напрямки політики в області оборони та забезпечує державну обороноздатність у мирний час і під час конфліктів.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Основні функції та завдання Міністерства оборони України</h2>
+      <ul>
+        <li><span class="highlight">Розробка оборонної політики та стратегії:</span> Міністерство розробляє основні напрямки оборонної стратегії України, включаючи планування військових заходів для забезпечення безпеки країни.</li>
+        <li><span class="highlight">Керівництво Збройними силами України:</span> МО керує бойовими частинами та підрозділами ЗСУ, а також підвищує боєздатність армії.</li>
+        <li><span class="highlight">Організація мобілізації:</span> МО координує мобілізаційні ресурси у випадку загрози війни.</li>
+        <li><span class="highlight">Оборонне планування:</span> Міністерство займається стратегічним плануванням оборони країни на різних рівнях.</li>
+        <li><span class="highlight">Координація з міжнародними партнерами:</span> МО співпрацює з міжнародними організаціями для укріплення обороноздатності України.</li>
+        <li><span class="highlight">Закупівля та модернізація озброєння:</span> МО здійснює закупівлю сучасної техніки та озброєнь для армії.</li>
+        <li><span class="highlight">Покращення умов для військовослужбовців та ветеранів:</span> Забезпечення соціальних гарантій, медичне обслуговування та підготовка кадрів.</li>
+        <li><span class="highlight">Участь у миротворчих операціях:</span> МО бере участь у міжнародних миротворчих місіях.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Стратегічні напрями діяльності Міністерства оборони</h2>
+      <ul>
+        <li><span class="highlight">Реформи та модернізація Збройних Сил України:</span> Перехід до гнучких, мобільних сил та модернізація підготовки військових.</li>
+        <li><span class="highlight">Оборонний бюджет:</span> Розробка бюджету для забезпечення національної безпеки.</li>
+        <li><span class="highlight">Генерація кадрової політики:</span> Оновлення системи підготовки кадрів та використання сучасних методів управління.</li>
+        <li><span class="highlight">Участь у стратегіях кіберзахисту:</span> Зосередженість на розвитку кібербезпеки та захисті від кіберзагроз.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Висновки</h2>
+      <div class="content">
+        <p>Міністерство оборони України — це фундаментальний орган, відповідальний за безпеку країни, функціонування Збройних Сил та інших формувань, що забезпечують обороноздатність на всіх рівнях. Від його роботи безпосередньо залежить здатність України протистояти сучасним загрозам, зберігати суверенітет і відновлювати територіальну цілісність. Міністерство постійно модернізує та покращує як оборонні структури, так і соціальне забезпечення для своїх військовослужбовців, сприяючи укріпленню оборони країни.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Міністерство оборони України
+  </footer>
+</body>
+</html>

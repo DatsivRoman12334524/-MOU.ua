@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти Міністерства Оборони</title>
+    <style>
+        /* Загальні стилі */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #003366; /* Темно-синій фон */
+            color: #f9f9f9; /* Світлі шрифти */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+
+        /* Хедер */
+        header {
+            background-color: #0a2c55; /* Дуже темно-синій */
+            color: #ffc107; /* Жовтий */
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Контейнер */
+        .container {
+            padding: 40px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #061736; /* Темно-синій фон для блоків */
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .container h2 {
+            color: #ffc107;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Профіль картки */
+        .profile {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .profile-card {
+            position: relative;
+            margin: 10px;
+            width: 240px;
+            cursor: pointer;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+            background-color: #112b44;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .profile-card:hover {
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-card h3 {
+            background-color: #5192d3;
+            color: #ffc107;
+            font-size: 1.5em;
+            padding: 10px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Стилі для підсвітки довкола картки */
+        .profile-card:hover::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid #ffc107;
+            border-radius: 15px;
+            animation: rotateEffect 2s infinite linear;
+            z-index: -1;
+        }
+
+        /* Анімація обертання підсвітки */
+        @keyframes rotateEffect {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .contact-info {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #70a2df;
+            color: #ffffff;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease;
+            border-top: 1px solid #0a2c55;
+            border-bottom: 1px solid #e1e1e1;
+            border-radius: 12px;
+        }
+
+        .contact-info.open {
+            max-height: 300px;
+            padding: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #003366;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Футер */
+        footer {
+            background-color: #0a2c55; /* Темно-синій */
+            color: #ffc107; /* Жовтий */
+            text-align: center;
+            padding: 10px;
+            font-size: 1em;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        // Функція для показу/приховування контактної інформації
+        function toggleInfo(id) {
+            const info = document.getElementById(id);
+            info.classList.toggle('open');
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h1>Контакти Міністерства Оборони</h1>
+</header>
+
+<div class="container">
+    <h2>Контактна інформація</h2>
+    <div class="profile">
+        <!-- Карта профілю Міністра Оборони -->
+        <div class="profile-card" onclick="toggleInfo('info-minister')">
+            <img src="https://ukraine-gta.com.ua/images/game/skins/300x280/37.webp" alt="Міністр Оборони">
+            <h3>Міністр Оборони</h3>
+        </div>
+
+        <!-- Карта профілю Заступника Міністра -->
+        <div class="profile-card" onclick="toggleInfo('info-deputy')">
+            <img src="https://ukraine-gta.com.ua/images/game/skins/300x280/50.webp" alt="Заступник Міністра">
+            <h3>Заступник Міністра</h3>
+        </div>
+
+        <!-- Карта профілю Секретаря Міністерства Оборони -->
+        <div class="profile-card" onclick="toggleInfo('info-secretary')">
+            <img src="https://ukraine-gta.com.ua/images/game/skins/300x280/255.webp" alt="Секретар Міністерства Оборони">
+            <h3>Секретар Міністерства</h3>
+        </div>
+    </div>
+
+    <!-- Інформація Міністра -->
+    <div id="info-minister" class="contact-info">
+        <h4>Міністр Оборони</h4>
+        <p><strong>Роман Дацик</strong></p>
+        <p><strong>Telegram</strong> <a href="https://t.me/dat_roman" target="_blank">@dat_roman</a></p>
+        <p><strong>Discord</strong> datsiv1131</p>
+    </div>
+
+    <!-- Інформація Заступника Міністра -->
+    <div id="info-deputy" class="contact-info">
+        <h4>Заступник Міністра</h4>
+        <p><strong>Вакантно</strong></p>
+        <p><strong>Telegram</strong> <a href="#">невідомо</a></p>
+        <p><strong>Discord</strong> невідомо</p>
+    </div>
+
+    <!-- Інформація Секретаря МО -->
+    <div id="info-secretary" class="contact-info">
+        <h4>Секретар Міністерства Оборони</h4>
+        <p><strong>Вакантно</strong></p>
+        <p><strong>Telegram</strong> <a href="#">невідомо</a></p>
+        <p><strong>Discord</strong> невідомо</p>
+    </div>
+</div>
+
+<footer>
+    <p>Міністерство Оборони України &copy; 2025</p>
+</footer>
+
+</body>
+</html>
+

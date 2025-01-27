@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Накази Міністерства Оборони</title>
+    <style>
+        /* Загальні стилі */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #003366; /* Темно-синій фон */
+            color: #f9f9f9; /* Світлі шрифти */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+            background-image: url('https://github.com/DatsivRoman12334524/mou.ua/blob/main/depositphotos_52886601-stock-illustration-vector-decorative-ukrainian-trident-removebg-preview.png?raw=true'); /* Додаємо фонове зображення */
+            background-size: 40%; /* Зменшуємо розмір фону до 40% */
+            background-position: center; /* Зображення в центрі */
+            background-attachment: fixed; /* Залишити фон на місці при прокручуванні */
+        }
+
+        /* Хедер */
+        header {
+            background-color: rgba(10, 44, 85, 0.8); /* Темно-синій фон з прозорістю */
+            color: #ffc107; /* Жовтий */
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Контейнер */
+        .container {
+            padding: 40px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: rgba(6, 23, 54, 0.8); /* Темно-синій фон для блоків */
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .container h2 {
+            color: #ffc107;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .order-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .order-item {
+            background-color: #112b44;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+        }
+
+        .order-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .order-item h3 {
+            font-size: 1.8em;
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+
+        .order-item p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        .order-item a {
+            color: #70a2df;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .order-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Футер */
+        footer {
+            background-color: rgba(10, 44, 85, 0.8); /* Темно-синій */
+            color: #ffc107; /* Жовтий */
+            text-align: center;
+            padding: 10px;
+            font-size: 1em;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Накази Міністерства Оборони</h1>
+</header>
+
+<div class="container">
+    <h2>Останні Накази</h2>
+
+    <!-- Список Наказів -->
+    <ul class="order-list">
+        <!-- Приклад одного наказу -->
+        <li class="order-item">
+            <h3>Наказ №000</h3>
+            <p><strong>Дата:</strong> ---</p>
+            <p><strong>Опис:</strong> ---</p>
+            <p><strong>Файл:</strong> <a href="---">Переглянути документ</a></p>
+        </li>
+        
+        <li class="order-item">
+            <h3>Наказ №000</h3>
+            <p><strong>Дата:</strong> ---</p>
+            <p><strong>Опис:</strong> ---</p>
+            <p><strong>Файл:</strong> <a href="---">Переглянути документ</a></p>
+        </li>
+
+    </ul>
+</div>
+
+<footer>
+    <p>Міністерство Оборони України &copy; 2025</p>
+</footer>
+
+</body>
+</html>

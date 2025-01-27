@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Міністерство Оборони</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e7/Emblem_of_the_Ministry_of_Defence_of_Ukraine.svg');
+            background-size: 700px 700px;
+            background-position: 14.1% 70%;
+            background-repeat: no-repeat;
+            background-color: #002b57;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            animation: fadeInPage 2s ease-out;
+        }
+
+        header {
+            background: #14005a;
+            color: #f39c12;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 5px 6px rgba(0, 0, 0, 0.411);
+            animation: fadeInHeader 1.5s ease-out;
+        }
+
+        header h1 {
+            margin: 3;
+            font-size: 3.5em;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        nav {
+            background: #09062c;
+            color: #ffffff;
+            padding: 18px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeInNav 1.8s ease-out;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.3em;
+            padding: 8px 0;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-out;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: #ffcc00;
+            bottom: 0;
+            left: 50%;
+            transition: width 0.3s ease-out, left 0.3s ease-out;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #1000a0;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            font-size: 1em;
+            animation: fadeInFooter 2s ease-out;
+        }
+
+        .container {
+            padding: 30px;
+            flex-grow: 1;
+            animation: fadeInContainer 1.8s ease-out;
+        }
+
+        .section {
+            background-color: rgba(0, 0, 0, 0.616);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            color: #fff;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.678);
+            animation: fadeInSection 2s ease-out;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            color: #ffcc00;
+        }
+
+        .bio-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            animation: slideInContainer 2s ease-out;
+        }
+
+        .bio-text {
+            width: 60%;
+            text-align: justify;
+            animation: fadeInText 2s ease-out;
+        }
+
+        .bio-photo {
+            width: 30%;
+            text-align: center;
+            animation: fadeInPhoto 2s ease-out;
+        }
+
+        .bio-photo img {
+            width: 100%;
+            border-radius: 15px;
+            animation: fadeInImage 2s ease-out;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeInPage {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInHeader {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInNav {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInFooter {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInContainer {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInSection {
+            0% { opacity: 0; transform: translateX(-50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInContainer {
+            0% { opacity: 0; transform: translateX(-50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInPhoto {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes fadeInImage {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Міністерство Оборони</h1>
+        <p>Офіційний сайт Міністерства Оборони Західної України</p>
+    </header>
+
+    <nav>
+        <a href="about.html">Про міністерство</a>
+        <a href="hierarchy.html">Структура</a>
+        <a href="orders.html">Накази</a>
+        <a href="Запитання.html">Запитання та відповіді</a>
+        <a href="contacts.html">Контакти</a>
+    </nav>
+
+    <div class="container">
+        <div class="section bio-container">
+            <div class="bio-text">
+                <p><strong>Я, Роман Дацик, Міністр Оборони Західної України.</strong> Моя служба у Збройних Силах України розпочалася з 18 років. Завжди прагнув служити своїй Батьківщині і рідному народу. Протягом моєї кар'єри я зростав разом із армією, отримував нові знання і досвід, і кожен рік приносив нові випробування, що допомагали вдосконалювати мої навички.</p>
+                
+                <p>У 30 років я став підполковником, а у 37 — полковником Збройних Сил України. Це був час важливих змін і модернізацій у країні та армії. Я докладав багато зусиль до розвитку військових структур, прагнучи створити сучасну, мобільну армію, здатну ефективно відповідати на будь-які загрози. Моя роль полягала не лише в управлінні військовими підрозділами, а й у навчанні нових генерацій офіцерів, передаючи їм необхідні знання та навички.</p>
+                
+                <p>У 41 років я був призначений Генералом Армії. Відтоді моїм основним завданням стало підвищення обороноздатності України, створення умов для захисту суверенітету нашої держави та підтримка миру на міжнародній арені. Я віддано служу Україні, дбаю про наших воїнів і їхні родини, а також працюю на забезпечення нашої армії найкращим обладнанням та навчанням.</p>
+                
+                <p>Зараз, перебуваючи на посаді Міністра оборони, я буду продовжувати покращувати ефективність нашої армії, нарощувати її потенціал та модернізувати військову техніку. Моєю метою є створення сучасних умов для розвитку військових сил, а також покращення взаємодії з міжнародними партнерами. Я ставлю перед собою завдання захищати суверенітет України, зміцнювати обороноздатність держави та забезпечити належні умови для наших військовослужбовців.</p>
+            </div>
+            
+            <div class="bio-photo">
+                <img src="https://ukraine-gta.com.ua/images/game/skins/300x280/37.webp" alt="Роман Дацик">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Міністерство Оборони Західної України &copy; 2025</p>
+    </footer>
+
+</body>
+</html>

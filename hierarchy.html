@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Структура Міністерства Оборони</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, rgba(0, 43, 87, 0.8), rgba(0, 60, 119, 0.8)), url('https://github.com/DatsivRoman12334524/mou.ua/blob/main/depositphotos_173703658-stock-illustration-ukraine-coat-of-arms-removebg-preview.png_27.01.2025_22_26_36-removebg-preview.png?raw=true') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffcc00;
+            font-size: 3.5em;
+            margin-top: 50px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .department-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 15px;
+            padding: 20px;
+            width: 240px;
+            height: 400px; /* Збільшили висоту для зображень */
+            text-align: center;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .department-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+        }
+
+        .department-box img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px; /* Розрив між зображенням і текстом */
+        }
+
+        .department-box h3 {
+            font-size: 1.5em;
+            color: #ffcc00;
+            margin-top: 10px;
+        }
+
+        .contact-info {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: left;
+            font-size: 1.1em;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .department-box.active .contact-info {
+            display: block;
+            opacity: 1;
+        }
+
+        .contact-info h4 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            background-color: #003366;
+            color: #ffcc00;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Оформлення тексту для розділів */
+        .text-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .text-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            margin: 15px;
+            padding: 20px;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .text-box h2 {
+            color: #ffcc00;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .text-box p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Структура Міністерства Оборони України</h1>
+
+<div class="container">
+    <!-- Міністр Оборони -->
+    <div class="department-box" onclick="toggleInfo('minister')">
+        <img src="https://ukraine-gta.com.ua/images/game/skins/300x280/37.webp" alt="Міністр Оборони">
+        <h3>Міністр Оборони</h3>
+        <h4>Роман Дацик</h4>
+        <div class="contact-info" id="minister">
+            <h4>Інформація:</h4>
+            <p><strong>Ім'я:</strong> Роман Дацик</p>
+            <p><strong>Telegram:</strong> <a href="https://t.me/dat_roman" target="_blank">@dat_roman</a></p>
+            <p><strong>Discord:</strong> datsiv1131</p>
+        </div>
+    </div>
+
+    <!-- Перший Заступник Міністра -->
+    <div class="department-box" onclick="toggleInfo('first-deputy')">
+        <img src="https://ukraine-gta.com.ua/images/game/skins/300x280/247.webp" alt="Перший Заступник Міністра">
+        <h3>Перший Заступник Міністра</h3>
+        <h4>Вакантно</h4>
+        <div class="contact-info" id="first-deputy">
+            <h4>Інформація:</h4>
+            <p><strong>Ім'я:</strong> Ім'я та Прізвище</p>
+            <p><strong>Telegram:</strong> <a href="#" target="_blank">невідомо</a></p>
+            <p><strong>Discord:</strong> невідомо</p>
+        </div>
+    </div>
+
+    <!-- Заступник Міністра -->
+    <div class="department-box" onclick="toggleInfo('deputy')">
+        <img src="https://ukraine-gta.com.ua/images/game/skins/300x280/50.webp" alt="Заступник Міністра">
+        <h3>Заступник Міністра</h3>
+        <h4>Вакантно</h4>
+        <div class="contact-info" id="deputy">
+            <h4>Інформація:</h4>
+            <p><strong>Ім'я:</strong> Ім'я та Прізвище</p>
+            <p><strong>Telegram:</strong> <a href="#" target="_blank">невідомо</a></p>
+            <p><strong>Discord:</strong> невідомо</p>
+        </div>
+    </div>
+
+    <!-- Начальник Генерального Штабу -->
+    <div class="department-box" onclick="toggleInfo('chief-of-staff')">
+        <img src="https://ukraine-gta.com.ua/images/game/skins/300x280/84.webp" alt="Начальник Генерального Штабу">
+        <h3>Начальник ГШ</h3>
+        <h5>Генерал ЗСУ</h5>
+        <h4>Олександр Навроцький</h4>
+        <div class="contact-info" id="chief-of-staff">
+            <h4>Інформація:</h4>
+            <p><strong>Ім'я:</strong> Олександр Навроцький</p>
+            <p><strong>Telegram:</strong> <a href="#" target="_blank">невідомо</a></p>
+            <p><strong>Discord:</strong> невідомо</p>
+        </div>
+    </div>
+
+    <!-- Секретар -->
+    <div class="department-box" onclick="toggleInfo('secretary')">
+        <img src="https://ukraine-gta.com.ua/images/game/skins/300x280/255.webp" alt="Секретар">
+        <h3>Секретар</h3>
+        <h4>Вакантно</h4>
+        <div class="contact-info" id="secretary">
+            <h4>Інформація:</h4>
+            <p><strong>Ім'я:</strong> Вакантно</p>
+            <p><strong>Telegram:</strong> <a href="#" target="_blank">невідомо</a></p>
+            <p><strong>Discord:</strong> невідомо</p>
+        </div>
+    </div>
+</div>
+
+<div class="text-container">
+    <div class="text-box">
+        <h2>Структура Міністерства Оборони</h2>
+        <p><strong>Міністр Оборони України</strong> – очолює Міністерство Оборони та приймає стратегічні рішення щодо оборонної політики, забезпечення національної безпеки та стабільності. Міністр Оборони координує дії між урядом, військовими та іншими відомствами.</p>
+        <p><strong>Перший заступник міністра оборони</strong> – відповідає за загальне управління та реалізацію оборонної стратегії на вищому рівні. Він може тимчасово виконувати обов'язки Міністра в разі відсутності.</p>
+        <p><strong>Заступники міністра оборони</strong> – члени вищого керівництва Міністерства, кожен з яких курирує окремі аспекти діяльності, такі як стратегічні завдання, міжнародне співробітництво, матеріально-технічне забезпечення, кадрова робота тощо.</p>
+    </div>
+    <div class="text-box">
+        <h2>Генеральний Штаб Збройних Сил України</h2>
+        <p><strong>Генеральний штаб Збройних Сил України (ГШ ЗСУ)</strong> – є центральним органом військового управління, який безпосередньо здійснює командування військами. Генеральний штаб координує дії підрозділів та визначає оперативну стратегію під час проведення військових операцій.</p>
+    </div>
+    <div class="text-box">
+        <h2>Секретаріат Міністерства Оборони</h2>
+        <p><strong>Секретаріат Міністерства Оборони</strong> – забезпечує адміністраторську та організаційну діяльність Міністерства, обробку документації, ведення протоколів та виконання рутинних функцій.</p>
+    </div>
+    <div class="text-box">
+        <h2>Департаменти та відділи</h2>
+        <p><strong>Департамент кадрової роботи</strong> – займається підбором, підготовкою та кар'єрним розвитком офіцерського складу.</p>
+        <p><strong>Департамент фінансів</strong> – відповідає за забезпечення фінансовими ресурсами Міністерства та Збройних Сил, їх розподілом, а також звітністю.</p>
+        <p><strong>Департамент військової техніки та озброєння</strong> – займається придбанням, ремонтом та модернізацією військової техніки та озброєння.</p>
+    </div>
+</div>
+
+<footer>
+    <p>Міністерство Оборони України &copy; 2025</p>
+</footer>
+
+<script>
+    function toggleInfo(id) {
+        const box = document.getElementById(id);
+        box.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
